@@ -1,0 +1,235 @@
+<html>
+    <!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>浮帆服务器 | 主页</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="icon" type="image/png" href="libraries/pic/icon.png" sizes="270x270">
+        <style type="text/css"></style>
+        <script src="js/greeting.js" defer></script>
+        <script src="js/pic.js" defer></script>
+        <script src="js/trigger.js" defer></script>
+        <meta lang="zh_cn">
+        <script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+    </head>
+    <body>
+        <div class="head">
+            <div class="main">
+                <a href="" class="main">
+                    <img class="main-image" src="libraries/pic/logo.png">
+                </a>
+            </div>
+            <div class="title">
+                <a class="title" href="#notice">公告</a>
+            </div>
+            <div class="title">
+                <a class="title" href="#dl">资源下载</a>
+            </div>
+            <div class="title">
+                <a class="title" href="#contact">联系我们</a>
+            </div>
+        </div>
+        <div class="first">
+            <div class="background">
+                <img class="background" src="" id="timeImage">
+                <!--根据时间显示图片-->
+            </div>
+            <div class="welcome">
+                <div class="server">
+                    <p class="welcome" id="greeting"></p>
+                    <h1 class="server">欢迎加入<span class="f">浮帆</span>服务器</h1>
+                    <p class="server">永不改变的初心,只为给你带来更好的游戏体验</p>
+                    <p class="f" id="copyIP" onclick="copyIP()">play.mcfpsw.top</p>
+                </div>
+                <script>
+                    function copyIP() {
+                        // 获取 p 元素的内容
+                        var text = document.getElementById("copyIP").innerText;
+                        // 创建一个临时输入元素
+                        var tempInput = document.createElement("input");
+                        tempInput.value = text;
+                        document.body.appendChild(tempInput);
+                        // 选中输入元素的内容
+                        tempInput.select();
+                        // 执行复制操作
+                        document.execCommand("copy");
+                        // 移除临时输入元素
+                        document.body.removeChild(tempInput);
+                        // 提示复制成功
+                        alert("复制成功");
+                    }
+                </script>
+            </div>
+            <div class="block">
+                <h1 class="title" id="notice">最新公告</h1>
+                <p class="notice-l">更新要点</p>
+                <li>网站全面更新，界面更美观，交互更方便</li>
+                <p class="notice-l">更新时间:2025/1/26</p>
+                <a class="notice-l" href="notice/notice.html">查看过往公告>></a>
+            </div>
+            <div class="block">
+                <h1 class="title" id="dl">资源下载</h1>
+                <div class="launcher">
+                    <h2 class="dl">启动器下载</h2>
+                    <div class="total">
+                        <div class="total-content">
+                            <a class="launcher-link" href="https://afdian.com/a/LTCat" target="_blank">
+                                <div class="launcher-img">
+                                    <img class="launcher-img" src="libraries/Buildings/pcl2.png">
+                                </div>
+                                <div class="launcher-text">
+                                    <p class="launcher-text">PCL2启动器</p>
+                                </div>
+                            </a>
+                            <div class="launcher-subtitle">
+                                <p class="launcher-subtitle">适用于Windows,适合新手</p>
+                            </div>
+                            <select class="launcher-version" id="check-pcl2-version" onchange="downloadpcl2('check-pcl2-version')" title="下载Plain Craft Launcher II">
+                                <option class="dl" value="">请选择一个版本</option>
+                                <option class="dl" value="libraries/launcher/pcl/Plain Craft Launcher 2.exe">Windows</option>
+                                <option class="dl" value="https://developer-oss.lanrar.com/file/?A2VSbA4/Dz5RWAA4UWQHa1doDzcDBwrtAKEHgwC6V8hSzlPiAdUCxQe1AuwA2QLmV7EOi18gVAZXEwZMVSkG7wOsUrIOtg/1UY4AvlGmB4NX5Q+1A8UK7AC/B6sAtFfpUsJT7AH9AtoHtgLaAPsC5levDohfXVR2V34GTlVMBlMDI1JDDiEPOlFqADNRcgdpV38PYQN8CjwAKQc3AHJXZFJ8U2EBJAIzB3cCMgA9Am9XaA5UX2lUMldtBjJVOQYxAzFSMQ5qD2lRNgBmUSMHYFd+DzcDago6ADcHMwBoV29SYlMwAXoCJgchAmkAZgIzVz8OP18vVGdXYAYvVToGNwMsUjYOZg9vUT4AZlE8BzJXOg8/Az4KOQBkB2UAZFdvUjRTMwFvAjUHZQI1AGUCMFc/DjxfZVRgV2IGZFVrBmUDNlIrDjYPI1FiAHBRcAd1V2gPeAM1CmwAOgc3AGVXZVJmUzIBbgJwByUCPQA5AmZXaw42XzFUYVdjBjdVPQYxAzBSNQ5mD2hRKQB4USMHYFdhD30DYQo5ADAHMgBrV2JSZFM2AWwCZQdkAnIAIQJzV3oONl8xVGFXYwYwVTsGPgMyUjcOZA9tUSEAI1FsB3ZXMA87A20KOQApBzQAaVd4UmNTMgFqAngHYAJgAGQCLVcrDm9fb1QhVz4GX1VqBmwDPlI1">如果打不开PCL2请运行这个集成环境</option>
+                            </select>
+                            <script>
+                                function downloadpcl2() {
+                                    var selectedLink = document.getElementById("check-pcl2-version").value;
+                                    if (selectedLink) {
+                                        window.location.href = selectedLink;
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <div class="total-content">
+                            <a class="launcher-link" href="https://pojav.skycraft.cn/" target="_blank">
+                                <div class="launcher-img">
+                                    <img class="launcher-img" src="libraries/Buildings/pojav.png">
+                                </div>
+                                <div class="launcher-text">
+                                    <p class="launcher-text">Pojav启动器</p>
+                                </div>
+                            </a>
+                            <div class="launcher-subtitle">
+                                <p class="launcher-subtitle">适用于Android,iOS,ipadOS,MacOS</p>
+                            </div>
+                            <select class="launcher-version" id="check-pojav-version" onchange="downloadpojav()" title="下载Pojav Launcher"><img class="dlpcl2" src="libraries/Download.png">
+                                <option class="dl" value="">请选择一个版本</option>
+                                <option class="dl" value="libraries/launcher/pojav/app-debug.apk">Android</option>
+                                <!--请自行在云服务器中登录Github下载-->
+                                <option class="dl" value="libraries/launcher/pojav/net.kdt.pojavlauncher-2.2-ios.ipa">iOS,ipadOS,MacOS</option>
+                            </select>
+                            <script>
+                                function downloadpojav() {
+                                    var selectedLink = document.getElementById("check-pojav-version").value;
+                                    if (selectedLink) {
+                                        window.location.href = selectedLink;
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <div class="total-content">
+                            <a class="launcher-link" href="https://hmcl.huangyuhui.net/" target="_blank">
+                                <div class="launcher-img">
+                                    <img class="launcher-img" src="libraries/Buildings/hmcl.jpg">
+                                </div>
+                                <div class="launcher-text">
+                                    <p class="launcher-text">HMCL启动器</p>
+                                </div>
+                            </a>
+                            <div class="launcher-subtitle">
+                                <p class="launcher-subtitle">适用于Windows,Linux,Mac,Android</p>
+                            </div>
+                            <select class="launcher-version" id="check-hmcl-version" onchange="downloadhmcl()" title="下载HMCL">
+                                <option class="dl" value="">请选择一个版本</option>
+                                <option class="dl" value="libraries/launcher/hmcl/HMCL-3.6.11.exe">适用于Windows</option>
+                                <option class="dl" value="libraries/launcher/hmcl/HMCL-3.6.11.jar">适用于Linux,Mac</option>
+                                <option class="dl" value="libraries/launcher/hmcl/HMCLPE.apk">适用于Android</option>
+                                <!--请自行在云服务器中下载-->
+                            </select>
+                            <script>
+                                function downloadhmcl() {
+                                    var selectedLink = document.getElementById("check-hmcl-version").value;
+                                    if (selectedLink) {
+                                        window.location.href = selectedLink;
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="versions">
+                    <h2 class="dl">版本下载</h2>
+                    <div class="dlbb">
+                        <p class="notice-l">当前版本:Java Edition 1.20.1</p>
+                        <select class="dlbb" id="dlbb" onchange="versions()">
+                            <option class="dlbb" value="">请选择一个版本</option>
+                            <option class="dlbb" value="libraries/mc/versions/1.20.1.zip">Minecraft 1.20.1(原版)</option>
+                            <option class="dlbb" value="libraries/mc/versions/1.20.1-OptiFine_I6.zip">Minecraft 1.20.1-OPTfine I6(高清修复)</option>
+                            <option class="dlbb" value="libraries/mc/versions/1.20.1-Fabric 0.16.10.zip">Minecraft 1.20.1-Fabric 0.16.10(Fabric模组加载器)</option>
+                        </select>
+                        <script>
+                            function versions() {
+                                var selectedLink = document.getElementById("dlbb").value;
+                                if (selectedLink) {
+                                    window.location.href = selectedLink;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="more-downloading">
+                    <a class="downloading-page-link" href="download/downloading-page.html">下载更多资源>></a>
+                </div>
+            </div>
+            <div class="block">
+                <h1 class="title">宣传片</h1>
+                <h2 class="dl">在线观看我们的宣传片</h2>
+                <video class="promotional-video" controls>
+                    <source src="libraries/videos/Promotional_video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="block">
+                <h1 class="title" id="zz">赞助通道</h1>
+                <div class="zz">
+                    <div class="wx">
+                        <img class="wx" src="libraries/pic/qq-wechat/mm_facetoface_collect_qrcode_1698763198831.png">
+                        <p class="wx">微信扫码赞助(尽量扫这里!)</p>
+                    </div>
+                    <div class="zfb">
+                        <img class="zfb" src="libraries/pic/qq-wechat/1707635741.jpg">
+                        <p class="zfb">支付宝扫码赞助</p>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <h1 class="title">使用手册</h1>
+                <div class="join">
+                    <div class="server-guide">
+                        <p class="download-server-guide">下载
+                            <a href="libraries/docx/浮帆服务器指南.docx" download="浮帆服务器指南.docx" class="download-server-guide">浮帆服务器指南</a>
+                        </p>
+                    </div>
+                    <h2 class="dl">如何下载启动器</h2>
+                    <div class="download-launcher">
+                        <video class="download-launcher" controls>
+                            <source src="libraries/videos/Download_launcher.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="block" id="contact">
+                <h1 class="title">联系我们</h1>
+                <div class="communicational-group">
+                    <p class="content-blue">加入浮帆交流群</p>
+                    <div class="trigger" id="container">
+                        <a class="communicational-group" id="trigger" href="https://qm.qq.com/q/TN6JlmcNyu" target="_blank">QQ点击链接加入群聊【浮帆 Floating Sails】</a>
+                        <img class="communicational-group" id="image" src="libraries/pic/qq-wechat/qrcode_1737968066964.jpg">
+                    </div>
+                </div>
+                <div class="email">
+                    <p class="content-blue">通过电子邮件联系我们</p>
+                    <a class="communicational-group" href="mailto:Faramita-2009@outlook.com">发送电子邮件给腐竹</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

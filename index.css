@@ -1,0 +1,604 @@
+        body
+        {
+            background-color: #f4f4f9;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        div.head
+        {
+            z-index: 999;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: rgba(250, 250, 250, 0.5);
+            width: 100%;
+            height: 70px;
+            display: block;
+        }
+        div.main
+        {
+            float: left;
+            width: auto;
+            height: 100%;
+            max-width: 25%;
+        }
+        img.main-image
+        {
+            width: auto;
+            height: 100%;
+        }
+        a.main
+        {
+            margin: 0;
+            width: auto;
+            height: 100%;
+            display: block;
+        }
+        div.title
+        {
+            width: auto;
+            height: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        a.title
+        {
+            position: relative;
+            text-decoration: none;
+            color: black;
+            width: auto;
+            height: auto;
+            font-size: 20px;
+            font-weight: 600;
+            align-items: center;
+            transition: color 0.3s ease,text-decoration 0.3s ease;
+        }
+        a.title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: rgb(1, 60, 152);
+            transition: width 0.3s ease;
+        }
+        a.title:hover{
+            color: rgb(1, 60, 152);
+            text-decoration: solid;
+        }
+        a.title:hover::after{
+            width: 100%;
+        }
+        div.log{
+            float: inline-end;
+            width: auto;
+            height: 100%;
+        }
+        a.login{
+            display: flex;
+            color: rgb(1, 60, 152);
+            justify-content: center;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+            align-items: center;
+        }
+        .dropdown {
+            float: right;
+            position: relative;
+            display: block;
+            right: 5%;
+        }
+        .dropbtn {
+            background-color: white;
+            width: 150px;
+            height: 100%;
+            color: rgb(1, 60, 152);
+            padding: 5px;
+            border-radius: 10px;
+            font-size: 25px;
+            cursor: pointer;
+            display: block;
+            border: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 100%;
+            box-shadow: 5px 5px 5px gray;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .dropdown-content-link {
+            border-radius: 5px;
+            background-color: rgb(247,247,247);
+            color: rgb(1, 60, 152);
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        div.background{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+        img.background{
+            width: inherit;
+            height: inherit;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        div.first
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div.welcome
+        {
+            width: 100%;
+            height: auto;
+        }
+        div.server{
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-direction: column;
+        }
+        p.welcome
+        {
+            text-align: center;
+            margin: 0;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 1000;
+        }
+        h1.server
+        {
+            text-align: center;
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 65px;
+        }
+        span.f
+        {
+            color: rgb(1, 60, 152);
+            margin: 0;
+        }
+        p.server
+        {
+            text-align: center;
+            margin: 0;
+            font-size: 40px;
+        }
+        p.f{
+            color: rgb(1, 60, 152);
+            text-align: center;
+            margin: 0;
+            font-size: 40px;
+            cursor: pointer;
+            width: 50%;
+            transition: transform 0.3s ease;
+        }
+        p.f:hover{
+            transform: scale(1.05);
+        }
+        div.block
+        {
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 50px
+        }
+        h1.title
+        {
+            font-size: 40px;
+            color: rgb(1, 60, 152);
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        p.content-blue{
+            font-size: 25px;
+            font-weight: 600;
+            color: rgb(1, 60, 152);
+        }
+        p.content{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        p.notice-l
+        {
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            font-size: 20px;
+            color: black;
+        }
+        div.bottom{
+            display: block;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        p.bottom{
+            font-family: Microsoft JHenghei;
+            font-weight: 400;
+            font-size: 20px;
+            color: grey;
+        }
+        a.notice-l
+        {
+            text-decoration: none;
+            color: rgb(1, 60, 152);
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        a.notice-l:hover,a.notice-l:focus{
+            transform: scale(1.05);
+        }
+        h1.dl
+        {
+            font-size: 40px;
+            color: rgb(1, 60, 152);
+        }
+        h2.dl
+        {
+            margin: 0;
+            font-size: 30px;
+            color: rgb(1, 60, 152);
+        }
+        div.launcher{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        div.total{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        div.total-content{
+            display: flex;
+            flex-basis: calc((100% - 2 * 10px) / 3);
+            height: 20%;
+            float: left;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        div.total-content:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        /*响应式设计*/
+        @media (max-width: 700px){
+            /* < 700px*/
+            div.total-content{
+                flex-basis: calc((100% - 1 * 10px) / 2);
+            }
+        }
+        @media (max-width: 400px){
+            /* < 400px*/
+            div.total-content{
+                flex-basis: 100%;
+            }
+        }
+        a.launcher-link
+        {
+            float: left;
+            width: 100%;
+            margin: 2%;
+            height: auto;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        div.launcher-img
+        {
+            float: left;
+            width: auto;
+            height: 100%;
+        }
+        img.launcher-img
+        {
+            width: 120px;
+            height: auto;
+            float: left;
+        }
+        div.launcher-text
+        {
+            text-align: center;
+            float: inline-end;
+            width: 70%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        p.launcher-text
+        {
+            margin: 0;
+            float: left;
+            clear: both;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            font-size: 30px;
+            color: black;
+        }
+        div.launcher-subtitle
+        {
+            width: 100%;
+            height: auto;
+            color: black;
+            font-family: Microsoft JHenghei;
+            font-size: 20px;
+            font-weight: 600;
+            clear: both;
+            text-align: center;
+            float: left;
+        }
+        p.launcher-subtitle
+        {
+            margin: 0;
+        }
+        select.launcher-version{
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgb(1, 60, 152);
+            font-size: 20px;
+            clear: both;
+            float: left;
+            border: 0;
+            cursor: pointer;
+        }
+        option.dl{
+            border-radius: 10px;
+            text-align: center;
+            max-width: 100%;
+            color: white;
+            box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.5);
+        }
+        div.versions{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        div.dlbb{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        select.dlbb{
+            width: 100%;
+            height: auto;
+            color: rgb(1, 60, 152);
+            background-color: white;
+            font-size: 25px;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            border: 0;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        select.dlbb:hover{
+            transform: scale(1.05);
+        }
+        option.dlbb{
+            max-width: 100%;
+        }
+        option{
+            cursor: pointer;
+        }
+        div.more-downloading{
+            width: auto;
+            height: auto;
+        }
+        a.downloading-page-link{
+            font-size: 20px;
+            text-decoration: none;
+            color: rgb(1, 60, 152);
+            font-weight: 550;
+            margin: 0;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        a.downloading-page-link:hover,a.downloading-page-link:focus{
+            transform: scale(1.05);
+        }
+        video.promotional-video{
+            width: 75%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        div.zz{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+        div.wx{
+            float: left;
+            display: flex;
+            width: 50%;
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+        }
+        img.wx{
+            width: 50%;
+            height: auto;
+        }
+        p.wx{
+            color: rgb(1, 60, 152);
+            text-align: center;
+            font-size: 25px;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+        }
+        div.zfb{
+            float: inline-end;
+            display: flex;
+            width: 50%;
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+        }
+        img.zfb{
+            width: 50%;
+            height: auto;
+        }
+        p.zfb{
+            color: rgb(1, 60, 152);
+            text-align: center;
+            font-size: 25px;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+        }
+        div.use{
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        div.join{
+            width: 100%;
+            height: auto;
+        }
+        div.server-guide{
+            width: 100%;
+            height: auto;
+        }
+        p.download-server-guide{
+            color: black;
+            font-size: 25px;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+        }
+        a.download-server-guide{
+            color: rgb(1, 60, 152);
+            font-size: 25px;
+            font-family: Microsoft JHenghei;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        a.download-server-guide:hover,a.download-server-guide:focus{
+            transform: scale(1.05);
+        }
+        div.download-launcher{
+            width: auto;
+            height: auto;
+        }
+        video.download-launcher{
+            width: auto;
+            height: auto;
+            max-width: 75%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        div.communicational-group{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        div.trigger{
+            width: 75%;
+            height: auto;
+            display: inline-block;
+            position: relative;
+        }
+        a.communicational-group{
+            text-decoration: none;
+            display: inline-block;
+            color: rgb(1, 60, 152);
+            font-size: 20px;
+            font-weight: 400;
+            transition: transform 0.3s ease;
+            transform-origin: left;
+            height: auto;
+        }
+        a.communicational-group:hover{
+            transform: scale(1.05);
+        }
+        img.communicational-group{
+            display: none;
+            position: absolute;
+            top: 50%; /* 垂直居中 */
+            left: 75%; /* 让图片在 a 元素右边出现 */
+            transform: translateY(-50%); /* 垂直居中 */
+            margin-left: 5px; /* 给图片和 a 元素之间添加一些间距 */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 为图片添加阴影效果 */
+            z-index: 999; /* 确保图片显示在最上层 */
+            width: 20%;
+            height: auto;
+        }
+        img.communicational-group.show{
+            display: block;
+            opacity: 1;
+        }
